@@ -1,5 +1,5 @@
 title: "GS MENA Conflict News Monitor"
-description: "Consolidated RSS feed for monitoring ongoing Middle East conflict."
+description: "Consolidated RSS feed for monitoring US–Iran escalation and regional military/security impacts (incl. UAE)."
 
 feeds:
   - name: "Al Jazeera"
@@ -15,6 +15,244 @@ feeds:
   - name: "Times of Israel"
     url: "https://www.timesofisrael.com/feed/"
 
-keywords: []
+# Only include items that match at least ONE of these (case-insensitive substring match)
+include_any:
+  # Core escalation / alerts / disruptions
+  - escalation
+  - tensions
+  - retaliation
+  - counterstrike
+  - reprisal
+  - "tit-for-tat"
+  - ceasefire
+  - truce
+  - emergency
+  - "state of emergency"
+  - "emergency alert"
+  - alert
+  - warning
+  - "security alert"
+  - "heightened security"
+  - curfew
+  - lockdown
+  - evacuation
+  - evacuated
+  - shelter
+  - siren
+  - "civil defense"
+  - "civil defence"
+  - "early warning"
+
+  # Kinetic activity / weapons
+  - attack
+  - attacked
+  - strike
+  - strikes
+  - airstrike
+  - "air strike"
+  - bombard
+  - bombardment
+  - shelling
+  - artillery
+  - mortar
+  - rocket
+  - rockets
+  - missile
+  - missiles
+  - ballistic
+  - "ballistic missile"
+  - "cruise missile"
+  - interceptor
+  - interception
+  - "shot down"
+  - downed
+  - drone
+  - drones
+  - uav
+  - "loitering munition"
+  - sabotage
+  - assassination
+  - raid
+  - incursion
+  - infiltration
+  - clashes
+  - firefight
+  - gunfire
+  - shooting
+  - explosion
+  - blast
+  - bombing
+  - ied
+
+  # Air defense / EW / ISR terms
+  - "air defense"
+  - "air defence"
+  - patriot
+  - thaad
+  - aegis
+  - "iron dome"
+  - radar
+  - "air raid"
+  - "electronic warfare"
+  - jamming
+  - spoofing
+  - "gps jamming"
+
+  # Maritime / shipping / energy security
+  - shipping
+  - vessel
+  - tanker
+  - maritime
+  - "maritime security"
+  - boarded
+  - boarding
+  - seized
+  - seizure
+  - intercepted
+  - interception
+  - naval
+  - warship
+  - destroyer
+  - frigate
+  - carrier
+  - "carrier strike group"
+  - blockade
+  - "strait of hormuz"
+  - hormuz
+  - "gulf of oman"
+  - red sea
+  - "bab al-mandab"
+  - refinery
+  - pipeline
+  - "oil terminal"
+  - "gas field"
+  - lng
+
+  # Geography (theatre)
+  - iran
+  - tehran
+  - irgc
+  - "islamic revolutionary guard"
+  - "qods force"
+  - iraq
+  - syria
+  - lebanon
+  - yemen
+  - jordan
+  - kuwait
+  - bahrain
+  - qatar
+  - saudi
+  - oman
+  - "persian gulf"
+  - gulf
+  - levant
+
+  # US / coalition posture
+  - pentagon
+  - centcom
+  - "u.s. central command"
+  - "united states"
+  - "u.s."
+  - "u.s. forces"
+  - troops
+  - deployment
+  - reinforcements
+  - warship
+  - "fighter jets"
+  - bomber
+
+  # Proxies / armed groups
+  - hezbollah
+  - houthis
+  - houthi
+  - militia
+  - militias
+  - "iran-backed"
+  - proxy
+  - hostage
+  - hostages
+
+  # UAE / aviation disruption
+  - uae
+  - "united arab emirates"
+  - dubai
+  - "abu dhabi"
+  - sharjah
+  - fujairah
+  - dxb
+  - dwc
+  - auh
+  - airspace
+  - "airspace closed"
+  - "airspace restrictions"
+  - "flight cancellations"
+  - "flights suspended"
+  - diverted
+  - diversion
+  - airport
+  - "airport closed"
+
+  # Keep Israel/Palestine terms as contextual (lower emphasis but allowed)
+  - israel
+  - gaza
+  - "west bank"
+  - palestin
+
+# Exclude if ANY of these appear
+exclude_any:
+  # Sports
+  - football
+  - soccer
+  - premier league
+  - champions league
+  - transfer
+  - match
+  - fixture
+  - tournament
+  - cup
+  - nba
+  - nfl
+  - f1
+  - "formula 1"
+  - tennis
+  - cricket
+
+  # Entertainment / lifestyle
+  - celebrity
+  - fashion
+  - film
+  - movie
+  - tv
+  - music
+  - arts
+  - lifestyle
+  - recipe
+  - horoscope
+  - dating
+
+  # Pure finance / business noise
+  - earnings
+  - dividend
+  - quarterly
+  - ipo
+  - stock
+  - stocks
+  - shares
+  - bond yields
+  - forex
+  - cryptocurrency
+  - bitcoin
+
+  # Evergreen/opinion formats (usually not useful for alerting)
+  - opinion
+  - op-ed
+  - editorial
+  - explainer
+  - analysis
+  - feature
+  - interview
+  - podcast
+  - newsletter
 
 max_items: 80
